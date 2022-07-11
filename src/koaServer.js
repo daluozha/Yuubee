@@ -3,9 +3,9 @@ const Router = require("koa-router");
 const koaJson = require("koa-json");
 const sender = require("koa-send");
 const parser = require("koa-bodyparser");
-const common = require("../util/common");
-const conf = require("../conf");
-const logger = require("../util/logger").getLogger('http');
+const common = require("./util/common");
+const conf = require("./config.js");
+const logger = require("./util/logger").getLogger('http');
 
 function startHttpServer(masterService) {
     const app = new Koa();
