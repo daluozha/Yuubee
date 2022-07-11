@@ -5,7 +5,7 @@ const sender = require("koa-send");
 const parser = require("koa-bodyparser");
 const common = require("../util/common");
 const conf = require("../conf");
-const logger = require("../util/logger");
+const logger = require("../util/logger").getLogger('http');
 
 function startHttpServer(masterService) {
     const app = new Koa();
@@ -13,7 +13,7 @@ function startHttpServer(masterService) {
 
     app.use(parser()).use(koaJson()).use(router.routes());
 
-    router.post("save", async (ctx) => {
+    router.post("/screen-shot", async (ctx) => {
         console.log(1, ctx);
         if (!ctx.request.body || !ctx.request.body.url) {
             return (ctx.body = {
@@ -46,7 +46,18 @@ function startHttpServer(masterService) {
         }
     });
 
-    // todo
+    router.get("/screen_shot/:name", async (ctx) => {
+        let path = `${ctx.params.name}`;
+        let options = {
+            root: conf.screenShotPath,
+        };
+        ctx.attachment(path);
+        await Sender(ctx, path, options);
+    });
+
+    router.get("/health-check", async (ctx) => {
+        ctx.body = "success";
+    });
 
     app.listen(conf.port);
 

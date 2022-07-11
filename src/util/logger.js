@@ -15,6 +15,7 @@ const log4js = require("log4js").configure({
         },
     },
 });
+
 const _getLogger = log4js.getLogger;
 
 log4js.getLogger = function (name) {
