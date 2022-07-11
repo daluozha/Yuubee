@@ -15,5 +15,20 @@
   "bugs": {
     "url": "https://github.com/daluozha/Yuubee/issues"
   },
-  "homepage": "https://github.com/daluozha/Yuubee#readme"
+  "homepage": "https://github.com/daluozha/Yuubee#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "memeye": "^1.0.3"
+  },
+  "dependencies": {
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-json": "^2.0.2",
+    "koa-router": "^11.0.1",
+    "koa-send": "^5.0.1",
+    "lodash": "^4.17.21",
+    "log4js": "^6.6.0",
+    "puppeteer": "^15.3.2",
+    "shortid": "^2.2.16"
+  }
 }
