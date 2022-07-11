@@ -36,7 +36,8 @@ async function appStart(info) {
 (async function () {
     const info = {
         port: conf.port,
-        ip: common.getIPAddress(),
+        // ip: common.getIPAddress(),
+        ip: "127.0.0.1",
     };
     await appStart(info);
 })();

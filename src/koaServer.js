@@ -5,13 +5,14 @@ const sender = require("koa-send");
 const parser = require("koa-bodyparser");
 const common = require("./util/common");
 const conf = require("./config.js");
-const logger = require("./util/logger").getLogger('http');
+const logger = require("./util/logger").getLogger("http");
+const cors = require("@koa/cors");
 
 function startHttpServer(masterService) {
     const app = new Koa();
     const router = new Router();
 
-    app.use(parser()).use(koaJson()).use(router.routes());
+    app.use(parser()).use(koaJson()).use(router.routes()).use(cors());
 
     router.post("/screen-shot", async (ctx) => {
         console.log(1, ctx);

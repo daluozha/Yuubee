@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@koa/cors': ^3.3.0
   cross-env: ^7.0.3
   koa: ^2.13.4
   koa-bodyparser: ^4.3.0
@@ -14,6 +15,7 @@ specifiers:
   shortid: ^2.2.16
 
 dependencies:
+  '@koa/cors': 3.3.0
   koa: 2.13.4
   koa-bodyparser: 4.3.0
   koa-json: 2.0.2
@@ -29,6 +31,13 @@ devDependencies:
   memeye: 1.0.3
 
 packages:
+
+  /@koa/cors/3.3.0:
+    resolution: {integrity: sha512-lzlkqLlL5Ond8jb6JLnVVDmD2OPym0r5kvZlMgAWiS9xle+Q5ulw1T358oW+RVguxUkANquZQz82i/STIRmsqQ==}
+    engines: {node: '>= 8.0.0'}
+    dependencies:
+      vary: 1.1.2
+    dev: false
 
   /@types/node/18.0.3:
     resolution: {integrity: sha512-HzNRZtp4eepNitP+BD6k2L6DROIDG4Q0fm4x+dwfsr6LGmROENnok75VGw40628xf+iR24WeMFcHuuBDUAzzsQ==}
