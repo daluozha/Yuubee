@@ -1,10 +1,19 @@
 # Yuubee
 
-### Deps
-- [Memeye](https://github.com/JerryC8080/Memeye/blob/master/README_zh.md)
-- Koa
-- log4js
+### setup
+`
+pnpm i
 
+pnpm run start
+`
+
+### Deps
+- koa
+- puppeteer
+- log4js
+- cross-env
+
+### Post Body
 `
 {
     "viewport": {
